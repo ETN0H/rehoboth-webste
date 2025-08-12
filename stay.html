@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Accommodations | Rehoboth Hotel & Apartments</title>
+    <meta
+      name="description"
+      content="Experience luxury at Rehoboth Hotel & Apartments along Kampala-Entebbe Highway. Book your stay, explore amenities, and enjoy our world-class service."
+    />
+    <link rel="icon" type="image/x-icon" href="outdoor/Favicon.jpg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-sector spinner-sector-primary"></div>
+        <div class="spinner-sector spinner-sector-secondary"></div>
+        <div class="spinner-sector spinner-sector-accent"></div>
+      </div>
+      <h1>Loading Accommodations</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="outdoor/logo-removebg-preview.png" alt="Hero.jpeg" />
+        </a>
+
+        <button class="hamburger" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link active">Stay</a></li>
+            <li><a href="amenities.html" class="nav-link">Amenities</a></li>
+          </ul>
+          <a href="#" class="btn-primary">Book Now</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="page-header">
+      <div class="header-content">
+        <h1>Our Accommodations</h1>
+        <p>
+          Discover your perfect retreat with our selection of luxurious rooms
+          and apartments
+        </p>
+      </div>
+    </header>
+
+    <!-- Room Filter Section -->
+    <section class="room-filter">
+      <div class="filter-container">
+        <form id="roomFilterForm">
+          <div class="filter-group">
+            <label for="roomType"><i class="fas fa-bed"></i> Room Type</label>
+            <select id="roomType">
+              <option value="all">All Room Types</option>
+              <option value="single">Single Room</option>
+              <option value="twin">Twin Room</option>
+              <option value="apartment">Two-Bedroom Apartment</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="priceRange"
+              ><i class="fas fa-tag"></i> Price Range</label
+            >
+            <select id="priceRange">
+              <option value="all">Any Price</option>
+              <option value="0-100">$0 - $100</option>
+              <option value="100-150">$100 - $150</option>
+              <option value="150-200">$150 - $200</option>
+              <option value="200+">$200+</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="capacity"
+              ><i class="fas fa-user-friends"></i> Capacity</label
+            >
+            <select id="capacity">
+              <option value="all">Any Capacity</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4+">4 Guests</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-secondary">
+            <i class="fas fa-filter"></i> Filter Rooms
+          </button>
+
+          <button type="reset" class="btn-tertiary">
+            <i class="fas fa-times"></i> Clear Filters
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Room Listing Section -->
+    <main class="room-listing">
+      <div class="listing-header">
+        <h2>Available Rooms</h2>
+        <div class="sort-options">
+          <label for="sortBy">Sort by:</label>
+          <select id="sortBy">
+            <option value="price-asc">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+            <option value="capacity-asc">Capacity (Low to High)</option>
+            <option value="capacity-desc">Capacity (High to Low)</option>
+            <option value="rating-desc">Guest Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="room-grid" id="roomGrid">
+        <!-- Room cards will be dynamically loaded here from API -->
+        <div class="loading-rooms">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Loading available rooms...</p>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button id="prevPage" class="btn-tertiary" disabled>
+          <i class="fas fa-chevron-left"></i> Previous
+        </button>
+        <span id="pageInfo">Page 1 of 1</span>
+        <button id="nextPage" class="btn-tertiary" disabled>
+          Next <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </main>
+
+    <!-- Room Details Modal -->
+    <div class="modal" id="roomModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-gallery">
+          <div class="main-image" id="mainImage">
+            <!-- Main image will be loaded here -->
+          </div>
+          <div class="thumbnail-grid" id="thumbnailGrid">
+            <!-- Thumbnails will be loaded here -->
+          </div>
+        </div>
+
+        <div class="modal-details">
+          <h2 id="modalRoomTitle">Room Title</h2>
+          <div class="room-meta">
+            <span class="room-type" id="modalRoomType"
+              ><i class="fas fa-bed"></i> Single Room</span
+            >
+            <span class="room-capacity" id="modalRoomCapacity"
+              ><i class="fas fa-user-friends"></i> 2 Guests</span
+            >
+            <span class="room-size" id="modalRoomSize"
+              ><i class="fas fa-expand"></i> 30 sqm</span
+            >
+            <span class="room-rating" id="modalRoomRating"
+              ><i class="fas fa-star"></i> 4.8</span
+            >
+          </div>
+
+          <div class="room-features" id="modalRoomFeatures">
+            <!-- Features will be loaded here -->
+          </div>
+
+          <div class="room-description" id="modalRoomDescription">
+            <!-- Description will be loaded here -->
+          </div>
+
+          <div class="room-price">
+            <span class="price-amount" id="modalRoomPrice">$120</span>
+            <span class="price-note">per night (excl. taxes)</span>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-tertiary" id="addToFavorites">
+              <i class="far fa-heart"></i> Save to Favorites
+            </button>
+            <button class="btn-primary" id="bookThisRoom">
+              <i class="fas fa-calendar-check"></i> Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Form Modal -->
+    <div class="modal" id="bookingModal">
+      <div class="modal-content booking-modal">
+        <button class="modal-close" id="bookingModalClose">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <h2>Book <span id="bookingRoomTitle">Room Title</span></h2>
+
+        <form id="bookingForm">
+          <input type="hidden" id="bookingRoomId" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingCheckIn">Check In</label>
+              <input type="date" id="bookingCheckIn" required />
+            </div>
+
+            <div class="form-group">
+              <label for="bookingCheckOut">Check Out</label>
+              <input type="date" id="bookingCheckOut" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingAdults">Adults</label>
+              <select id="bookingAdults" required>
+                <option value="1">1 Adult</option>
+                <option value="2" selected>2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">4 Adults</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingChildren">Children</label>
+              <select id="bookingChildren">
+                <option value="0" selected>0 Children</option>
+                <option value="1">1 Child</option>
+                <option value="2">2 Children</option>
+                <option value="3">3 Children</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingSpecialRequests">Special Requests</label>
+            <textarea
+              id="bookingSpecialRequests"
+              rows="3"
+              placeholder="Any special requirements or requests..."
+            ></textarea>
+          </div>
+
+          <div class="guest-details">
+            <h3>Guest Information</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingFirstName">First Name</label>
+                <input type="text" id="bookingFirstName" required />
+              </div>
+
+              <div class="honeytrap">
+                <label for="bookingAddress">Address</label>
+                <input type="text" id="bookingHoney" />
+              </div>
+
+              <div class="form-group">
+                <label for="bookingLastName">Last Name</label>
+                <input type="text" id="bookingLastName" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingEmail">Email</label>
+                <input type="email" id="bookingEmail" required />
+              </div>
+
+              <div class="form-group">
+                <label for="bookingPhone">Phone</label>
+                <input type="tel" id="bookingPhone" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-check-circle"></i> Confirm Booking
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+        <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>REHOBOTH</h3>
+          <span>Hotel & Apartments</span>
+          <p>Your luxury retreat along the Kampala-Entebbe Highway</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="3">Rooms & Apartments</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <address>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Lweza, Kampala-Entebbe
+              Highway, Uganda
+            </p>
+            <p><i class="fas fa-phone-alt"></i> +256 039 4825222</p>
+            <p><i class="fas fa-envelope"></i> info@rehobothhotel.com</p>
+          </address>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe for special offers and updates</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit" class="btn-tertiary" id="footer-button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2023 Rehoboth Hotel & Apartments. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script>
+      const SUPABASE_URL = "https://zsmimysqikhicmeqsqyr.supabase.co";
+      const SUPABASE_ANON_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpzbWlteXNxaWtoaWNtZXFzcXlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ3Mzc2ODQsImV4cCI6MjA3MDMxMzY4NH0.SBqXbwMJ1pZNfcm93BX7JBRiWQYdMqysjAInjqecUPI";
+
+      const supabase = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+      );
+    </script>
+    <script src="java.js"></script>
+  </body>
+</html>

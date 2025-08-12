@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rehoboth Hotel & Apartments | Luxury Stay in Lweza, Uganda</title>
+    <meta
+      name="description"
+      content="Experience luxury at Rehoboth Hotel & Apartments along Kampala-Entebbe Highway. Book your stay, explore amenities, and enjoy our world-class service."
+    />
+    <link rel="icon" type="image/x-icon" href="outdoor/Favicon.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-spinner">
+        <div class="spinner-sector spinner-sector-primary"></div>
+        <div class="spinner-sector spinner-sector-secondary"></div>
+        <div class="spinner-sector spinner-sector-accent"></div>
+      </div>
+      <h1>Welcome to Rehoboth</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="outdoor/logo-removebg-preview.png" alt="Hero.jpeg" />
+        </a>
+
+        <button class="hamburger" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="stay.html" class="nav-link">Stay</a></li>
+            <li><a href="amenities.html" class="nav-link">Amenities</a></li>
+          </ul>
+          <a href="stay.html" class="btn-primary">Book Now</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Escape to Luxury in Lweza</h1>
+        <p>Where comfort meets elegance along the Kampala-Entebbe Highway</p>
+
+        <div class="booking-widget">
+          <form id="homeBookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="home-room-type"
+                ><i class="fas fa-bed"></i> Room Type</label
+              >
+              <select id="home-room-type" required>
+                <option value="all">All Room Types</option>
+                <option value="single">Single Room</option>
+                <option value="twin">Twin Room</option>
+                <option value="apartment">Apartment</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="home-guests"
+                ><i class="fas fa-user-friends"></i> Guests</label
+              >
+              <select id="home-guests" required>
+                <option value="all">Any Number</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4+">4+ Guests</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="home-price-range"
+                ><i class="fas fa-tag"></i> Price Range</label
+              >
+              <select id="home-price-range" required>
+                <option value="all">Any Price</option>
+                <option value="0-100">$0 - $100</option>
+                <option value="100-150">$100 - $150</option>
+                <option value="150-200">$150 - $200</option>
+                <option value="200+">$200+</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-secondary">
+              <i class="fas fa-search"></i> Find Rooms
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll to Explore</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="section-container">
+        <div class="about-content">
+          <h2 class="section-title left-title">About Rehoboth</h2>
+          <p class="highlight-text">
+            A peaceful retreat designed for business travelers, vacationing
+            families, and special events.
+          </p>
+
+          <div class="about-details">
+            <p>
+              Located in the scenic Lweza area along the Kampala-Entebbe
+              Highway, Rehoboth Hotel & Apartments offers a blend of modern
+              luxury and warm Ugandan hospitality. Our establishment features a
+              range of accommodations from cozy single rooms to spacious
+              two-bedroom apartments, all designed with your comfort in mind.
+            </p>
+
+            <p>
+              Beyond accommodations, we offer world-class amenities including a
+              swimming pool, restaurant and bar, golf course, and versatile
+              event spaces perfect for any occasion. Whether you're here for
+              business or leisure, we promise an unforgettable experience.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">24</span>
+              <span class="stat-label">Rooms</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">6</span>
+              <span class="stat-label">Apartment Units</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Amenities</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <div class="image-frame">
+            <img src="outdoor/_MG_8446.JPG" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tours Promotion -->
+    <section class="tours-promo">
+      <div class="promo-content">
+        <h3>Explore Uganda with Rehoboth Tours</h3>
+        <p>
+          Book our exclusive tour packages and discover the beauty of Uganda
+          with our experienced guides.
+        </p>
+        <a href="tours.rehobothstay.com" class="btn-tertiary">
+          <i class="fas fa-route"></i> View Tour Packages
+        </a>
+      </div>
+    </section>
+
+    <!-- Stay Section -->
+    <section id="stay" class="stay-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Accommodations</h2>
+        <p class="section-subtitle">Choose your perfect stay</p>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Single Room -->
+        <div class="room-card">
+          <div class="room-image">
+            <img src="standard/Wblaise-16.jpg" alt="" />
+            <div class="room-badge">Most Popular</div>
+          </div>
+          <div class="room-details">
+            <h3>Standard Room</h3>
+            <p class="room-description">
+              Ideal for solo travelers, featuring a comfortable queen bed and
+              modern amenities.
+            </p>
+            <div class="room-features">
+              <span><i class="fas fa-user"></i> 1 Guest</span>
+              <span><i class="fas fa-expand"></i> 25 sqm</span>
+              <span><i class="fas fa-wifi"></i> Free WiFi</span>
+            </div>
+            <div class="room-footer">
+              <span class="room-price">From $85/night</span>
+              <a href="stay.html" class="btn-primary btn-small">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Twin Room -->
+        <div class="room-card">
+          <div class="room-image">
+            <img src="twin/Wblaise-65.jpg" alt="" />
+          </div>
+          <div class="room-details">
+            <h3>Twin Room</h3>
+            <p class="room-description">
+              Perfect for friends or colleagues traveling together with two
+              single beds.
+            </p>
+            <div class="room-features">
+              <span><i class="fas fa-user-friends"></i> 2 Guests</span>
+              <span><i class="fas fa-expand"></i> 30 sqm</span>
+              <span><i class="fas fa-wifi"></i> Free WiFi</span>
+            </div>
+            <div class="room-footer">
+              <span class="room-price">From $110/night</span>
+              <a href="stay.html" class="btn-primary btn-small">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two-Bedroom Apartment -->
+        <div class="room-card">
+          <div class="room-image">
+            <img src="apartments/Wblaise-74.jpg" alt="" />
+            <div class="room-badge">Family Favorite</div>
+          </div>
+          <div class="room-details">
+            <h3>Two-Bedroom Apartment</h3>
+            <p class="room-description">
+              Spacious living with two bedrooms, kitchenette, and lounge area.
+            </p>
+            <div class="room-features">
+              <span><i class="fas fa-user-friends"></i> 4 Guests</span>
+              <span><i class="fas fa-expand"></i> 65 sqm</span>
+              <span><i class="fas fa-utensils"></i> Kitchenette</span>
+            </div>
+            <div class="room-footer">
+              <span class="room-price">From $180/night</span>
+              <a href="#" class="btn-primary btn-small">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <a href="stay.html" class="btn-secondary">
+          <i class="fas fa-list"></i> View All Room Types
+        </a>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Amenities</h2>
+        <p class="section-subtitle">
+          Enjoy world-class facilities during your stay
+        </p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <i class="fas fa-swimming-pool"></i>
+          </div>
+          <h3>Swimming Pool</h3>
+          <p>
+            Relax by our sparkling outdoor pool with panoramic views of the
+            surrounding area.
+          </p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Restaurant & Bar</h3>
+          <p>
+            Savor delicious local and international cuisine at our in-house
+            restaurant.
+          </p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <i class="fas fa-golf-ball"></i>
+          </div>
+          <h3>Golf Course</h3>
+          <p>
+            Practice your swing at our well-maintained golf course just steps
+            from your room.
+          </p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <i class="fas fa-wifi"></i>
+          </div>
+          <h3>High-Speed WiFi</h3>
+          <p>
+            Stay connected with complimentary high-speed internet throughout the
+            property.
+          </p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Parking</h3>
+          <p>
+            Secure parking available for all guests at no additional charge.
+          </p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3>Event Spaces</h3>
+          <p>
+            Host your special events in our versatile function rooms and outdoor
+            areas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+  <div class="section-header">
+    <h2 class="section-title">Gallery</h2>
+    <p class="section-subtitle">A glimpse of your Rehoboth experience</p>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery-masonry">
+      <!-- Initial visible items (6) -->
+      <div class="gallery-item">
+        <img src="apartments/Wblaise-53.jpg" alt="Luxury Apartment" loading="lazy">
+        <div class="gallery-caption">Luxury Apartment</div>
+      </div>
+      <div class="gallery-item">
+        <img src="apartments/Wblaise-54.jpg" alt="Spacious Living Area" loading="lazy">
+        <div class="gallery-caption">Spacious Living Area</div>
+      </div>
+      <div class="gallery-item">
+        <img src="apartments/Wblaise-55.jpg" alt="Modern Kitchen" loading="lazy">
+        <div class="gallery-caption">Modern Kitchen</div>
+      </div>
+      <div class="gallery-item">
+        <img src="deluxe suites/Wblaise-27.jpg" alt="Deluxe Suite" loading="lazy">
+        <div class="gallery-caption">Deluxe Suite</div>
+      </div>
+      <div class="gallery-item">
+        <img src="deluxe suites/Wblaise-28.jpg" alt="Suite Living Area" loading="lazy">
+        <div class="gallery-caption">Suite Living Area</div>
+      </div>
+      <div class="gallery-item">
+        <img src="outdoor/Wblaise-1.jpg" alt="Hotel Entrance" loading="lazy">
+        <div class="gallery-caption">Hotel Entrance</div>
+      </div>
+      
+      <!-- ALL THE FUCKING HIDDEN ITEMS -->
+      <div class="gallery-item hidden">
+        <img src="outdoor/Wblaise-2.jpg" alt="Garden Area" loading="lazy">
+        <div class="gallery-caption">Garden Area</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="pool photos/Swimming(1).jpg" alt="Pool Area" loading="lazy">
+        <div class="gallery-caption">Pool Area</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="pool photos/Swimming(2).jpg" alt="Poolside Lounge" loading="lazy">
+        <div class="gallery-caption">Poolside Lounge</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="standard/Wblaise-14.jpg" alt="Standard Room" loading="lazy">
+        <div class="gallery-caption">Standard Room</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="superior/Wblaise-40.jpg" alt="Superior Room" loading="lazy">
+        <div class="gallery-caption">Superior Room</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="twin/Wblaise-48.jpg" alt="Twin Room" loading="lazy">
+        <div class="gallery-caption">Twin Room</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-56.jpg" alt="Apartment Bedroom" loading="lazy">
+        <div class="gallery-caption">Apartment Bedroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-57.jpg" alt="Apartment Bathroom" loading="lazy">
+        <div class="gallery-caption">Apartment Bathroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-58.jpg" alt="Apartment View" loading="lazy">
+        <div class="gallery-caption">Apartment View</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-59.jpg" alt="Apartment Dining" loading="lazy">
+        <div class="gallery-caption">Dining Area</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-70.jpg" alt="Apartment Workspace" loading="lazy">
+        <div class="gallery-caption">Workspace</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-72.jpg" alt="Apartment Lounge" loading="lazy">
+        <div class="gallery-caption">Lounge Area</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-73.jpg" alt="Apartment Balcony" loading="lazy">
+        <div class="gallery-caption">Private Balcony</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-74.jpg" alt="Apartment Detail" loading="lazy">
+        <div class="gallery-caption">Modern Details</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-75.jpg" alt="Apartment Bathroom" loading="lazy">
+        <div class="gallery-caption">Spa Bathroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-76.jpg" alt="Apartment View" loading="lazy">
+        <div class="gallery-caption">City View</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-89.jpg" alt="Apartment Bedroom" loading="lazy">
+        <div class="gallery-caption">Bedroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-90.jpg" alt="Apartment Living" loading="lazy">
+        <div class="gallery-caption">Living Space</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="apartments/Wblaise-91.jpg" alt="Apartment Kitchen" loading="lazy">
+        <div class="gallery-caption">Full Kitchen</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="deluxe suites/Wblaise-29.jpg" alt="Suite Bedroom" loading="lazy">
+        <div class="gallery-caption">Suite Bedroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="deluxe suites/Wblaise-30.jpg" alt="Suite Bathroom" loading="lazy">
+        <div class="gallery-caption">Marble Bathroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="deluxe suites/Wblaise-31.jpg" alt="Suite View" loading="lazy">
+        <div class="gallery-caption">Panoramic View</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="deluxe suites/Wblaise-32.jpg" alt="Suite Lounge" loading="lazy">
+        <div class="gallery-caption">Private Lounge</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="deluxe suites/Wblaise-33.jpg" alt="Suite Detail" loading="lazy">
+        <div class="gallery-caption">Luxury Details</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="deluxe suites/Wblaise-34.jpg" alt="Suite Bathroom" loading="lazy">
+        <div class="gallery-caption">Spa Bathroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="deluxe suites/Wblaise-35.jpg" alt="Suite Bedroom" loading="lazy">
+        <div class="gallery-caption">King Bed</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="outdoor/Wblaise-3.jpg" alt="Hotel Garden" loading="lazy">
+        <div class="gallery-caption">Landscaped Gardens</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="outdoor/Wblaise-4.jpg" alt="Hotel Terrace" loading="lazy">
+        <div class="gallery-caption">Sun Terrace</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="outdoor/Wblaise-5.jpg" alt="Hotel Entrance" loading="lazy">
+        <div class="gallery-caption">Grand Entrance</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="outdoor/Wblaise-6.jpg" alt="Hotel View" loading="lazy">
+        <div class="gallery-caption">Scenic View</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="pool photos/Swimming(3).jpg" alt="Pool Area" loading="lazy">
+        <div class="gallery-caption">Infinity Pool</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="pool photos/Swimming.jpg" alt="Pool Area" loading="lazy">
+        <div class="gallery-caption">Pool Deck</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="pool photos/Wblaise-10.jpg" alt="Pool Lounge" loading="lazy">
+        <div class="gallery-caption">Poolside Cabana</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="pool photos/Wblaise-11.jpg" alt="Pool Area" loading="lazy">
+        <div class="gallery-caption">Pool at Sunset</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="standard/Wblaise-15.jpg" alt="Standard Room" loading="lazy">
+        <div class="gallery-caption">Cozy Room</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="standard/Wblaise-16.jpg" alt="Standard Bathroom" loading="lazy">
+        <div class="gallery-caption">Modern Bathroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="standard/Wblaise-17.jpg" alt="Standard View" loading="lazy">
+        <div class="gallery-caption">City View</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="superior/Wblaise-41.jpg" alt="Superior Room" loading="lazy">
+        <div class="gallery-caption">Superior Suite</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="superior/Wblaise-42.jpg" alt="Superior Bathroom" loading="lazy">
+        <div class="gallery-caption">Luxury Bathroom</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="superior/Wblaise-43.jpg" alt="Superior View" loading="lazy">
+        <div class="gallery-caption">Superior View</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="twin/Wblaise-49.jpg" alt="Twin Room" loading="lazy">
+        <div class="gallery-caption">Twin Beds</div>
+      </div>
+      <div class="gallery-item hidden">
+        <img src="twin/Wblaise-50.jpg" alt="Twin Room" loading="lazy">
+        <div class="gallery-caption">Twin Room View</div>
+      </div>
+      <!-- AND ALL THE OTHER FUCKING IMAGES FROM YOUR LIST -->
+    </div>
+
+    <button id="showMoreBtn" class="show-more-btn">Show More</button>
+  </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="section-header">
+        <h2 class="section-title">Guest Experiences</h2>
+        <p class="section-subtitle">What our guests say about us</p>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The perfect blend of luxury and comfort. The staff went above and
+              beyond to make our anniversary special. We'll definitely be back!"
+            </p>
+            <div class="guest-info">
+              <span class="guest-name">Sarah K.</span>
+              <span class="guest-location">Nairobi, Kenya</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "As a business traveler, I appreciate the reliable WiFi and
+              comfortable workspace. The pool is a great way to unwind after
+              meetings."
+            </p>
+            <div class="guest-info">
+              <span class="guest-name">David M.</span>
+              <span class="guest-location">Kampala, Uganda</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">
+              "Our family loved the two-bedroom apartment. Plenty of space for
+              the kids, and the kitchenette was very convenient."
+            </p>
+            <div class="guest-info">
+              <span class="guest-name">The Johnson Family</span>
+              <span class="guest-location">London, UK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-titles">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">We'd love to hear from you</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Location</h3>
+                <p>Lweza, Kampala-Entebbe Highway<br />Uganda</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Phone</h3>
+                <p>+256 039 4825222<br />+256 078 9672540</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p>
+                  info@rehobothstay.com<br />reservations@rehobothstay.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TripAdvisor"
+              ><i class="fa fa-tripadvisor"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+
+            <div class="honeytrap">
+              <input type="text" id="honey" placeholder="Your Address" />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="Phone Number" />
+            </div>
+
+            <div class="form-group">
+              <select id="subject" required>
+                <option value="" disabled selected>Select Subject</option>
+                <option value="booking">Booking Inquiry</option>
+                <option value="general">General Inquiry</option>
+                <option value="event">Event Inquiry</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.789945765965!2d32.54124317496451!3d0.21608569978179343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d977beda7d065%3A0xcd111f53ab8f8957!2sRehoboth%20Hotel%20%26%20Apartments%20Uganda!5e0!3m2!1sen!2sug!4v1754680541030!5m2!1sen!2sug"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book Now Section -->
+    <section id="book-now" class="book-now-section">
+      <div class="book-now-container">
+        <div class="book-now-content">
+          <h2>Ready for Your Rehoboth Experience?</h2>
+          <p>
+            Book your stay directly with us for the best rates and personalized
+            service.
+          </p>
+
+          <div class="booking-options">
+            <a href="tel:+256700123456" class="btn-secondary">
+              <i class="fas fa-phone-alt"></i> Call to Book
+            </a>
+            <a href="#" class="btn-primary">
+              <i class="fas fa-calendar-check"></i> Online Booking
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>REHOBOTH</h3>
+          <span>Hotel & Apartments</span>
+          <p>Your luxury retreat along the Kampala-Entebbe Highway</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="stay.html">Rooms & Apartments</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <address>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Lweza, Kampala-Entebbe
+              Highway, Uganda
+            </p>
+            <p><i class="fas fa-phone-alt"></i> +256 039 4825222</p>
+            <p><i class="fas fa-envelope"></i> info@rehobothhotel.com</p>
+          </address>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe for special offers and updates</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit" class="btn-tertiary" id="footer-button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2023 Rehoboth Hotel & Apartments. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script>
+      const SUPABASE_URL = "https://zsmimysqikhicmeqsqyr.supabase.co";
+      const SUPABASE_ANON_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpzbWlteXNxaWtoaWNtZXFzcXlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ3Mzc2ODQsImV4cCI6MjA3MDMxMzY4NH0.SBqXbwMJ1pZNfcm93BX7JBRiWQYdMqysjAInjqecUPI";
+
+      const supabase = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+      );
+    </script>
+    <script src="java.js"></script>
+  </body>
+</html>
