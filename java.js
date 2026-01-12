@@ -160,7 +160,7 @@ async function initStayPage() {
 
     async function fetchRooms() {
         try {
-            const { data, error } = await supabase
+            const { data, error } = await SUPABASE
                 .from('Rooms')
                 .select('*')
                 .neq('availability', 'unavailable')
@@ -518,7 +518,7 @@ async function initStayPage() {
                     };
 
                     // First mark room as unavailable
-                    const { error: updateError } = await supabase
+                    const { error: updateError } = await SUPABASE
                         .from('Rooms')
                         .update({ availability: 'unavailable' })
                         .eq('name', roomId);
@@ -526,7 +526,7 @@ async function initStayPage() {
                     if (updateError) throw updateError;
 
                     // Then create booking
-                    const { data, error } = await supabase
+                    const { data, error } = await SUPABASE
                         .from('bookings')
                         .insert([bookingData]);
 
@@ -619,7 +619,7 @@ function setupContactForm() {
 
 
             // Insert into Supabase
-            const { data, error } = await supabase
+            const { data, error } = await SUPABASE
                 .from('contact_messages')
                 .insert([contactData]);
 
@@ -662,3 +662,4 @@ function setupHomeBookingForm() {
         });
     }
 }
+
