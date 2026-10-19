@@ -2604,3 +2604,258 @@ input[type="date"] {
     padding: 1.5rem 1rem;
   }
 }
+
+/* ===== MOBILE LAYOUT POLISH ===== */
+.ai-chat-button {
+  position: fixed;
+  right: 1.25rem;
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: var(--black);
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+  font-family: 'Aldus', serif;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.ai-chat-button > i {
+  color: #f4bd69;
+  font-size: 1.15rem;
+}
+
+.ai-chat-button:hover {
+  background: var(--primary-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.ai-chat-button:focus-visible {
+  outline: 3px solid #f4bd69;
+  outline-offset: 3px;
+}
+
+.ai-chat-badge {
+  padding: 0.25rem 0.35rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
+  .nav-menu {
+    top: 58px;
+    width: min(86vw, 340px);
+    max-width: none;
+    height: calc(100dvh - 58px);
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-menu > .btn-primary {
+    min-width: 160px;
+    text-align: center;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    margin-top: 58px;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .hero-content {
+    padding: 2rem 0;
+  }
+
+  .hero h1 {
+    max-width: 15ch;
+    text-align: center;
+    font-size: clamp(2rem, 7vw, 2.75rem);
+  }
+
+  .hero p {
+    text-align: center;
+  }
+
+  .booking-widget {
+    width: 100%;
+    max-width: 560px;
+    box-sizing: border-box;
+    padding: 1.25rem;
+  }
+
+  .booking-form {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .booking-form .btn-secondary {
+    min-height: 48px;
+  }
+
+  .section-container,
+  .room-listing,
+  .room-filter {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .section-container {
+    gap: 1.5rem;
+  }
+
+  .about-image {
+    height: auto;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .stat-item {
+    padding: 0.85rem 0.5rem;
+  }
+
+  .listing-header {
+    align-items: flex-start;
+  }
+
+  .sort-options {
+    width: 100%;
+  }
+
+  .sort-options select {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .room-grid,
+  .rooms-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .amenities-grid-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .amenities-grid-section .section-container {
+    padding: 0;
+  }
+
+  .contact-section,
+  .testimonials-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .contact-container {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-info,
+  .contact-form {
+    min-width: 0;
+  }
+
+  .info-content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .main-footer {
+    padding: 3rem 1rem 0;
+  }
+
+  .footer-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .hero {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .booking-widget {
+    padding: 1rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    min-height: 280px;
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .room-filter,
+  .room-listing {
+    padding: 2rem 0.75rem;
+  }
+
+  .sort-options {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sort-options select {
+    width: 100%;
+  }
+
+  .ai-chat-button {
+    right: 0.75rem;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    gap: 0.5rem;
+    padding: 0.8rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}

@@ -33,31 +33,33 @@ document.addEventListener('DOMContentLoaded', function () {
   const hiddenItems = document.querySelectorAll('.gallery-item.hidden');
   let itemsToShow = 6; // Number of items to show each click
 
-  showMoreBtn.addEventListener('click', function() {
-    // Show next batch of hidden items
-    let shownCount = 0;
-    for (let i = 0; i < hiddenItems.length && shownCount < itemsToShow; i++) {
-      if (hiddenItems[i].classList.contains('hidden')) {
-        hiddenItems[i].classList.remove('hidden');
-        shownCount++;
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', function() {
+      // Show next batch of hidden items
+      let shownCount = 0;
+      for (let i = 0; i < hiddenItems.length && shownCount < itemsToShow; i++) {
+        if (hiddenItems[i].classList.contains('hidden')) {
+          hiddenItems[i].classList.remove('hidden');
+          shownCount++;
+        }
       }
-    }
 
-    // Hide button if no more items to show
-    if (document.querySelectorAll('.gallery-item.hidden').length === 0) {
+      // Hide button if no more items to show
+      if (document.querySelectorAll('.gallery-item.hidden').length === 0) {
+        showMoreBtn.style.display = 'none';
+      }
+
+      // Recalculate masonry layout
+      if (typeof Masonry !== 'undefined') {
+        const msnry = new Masonry('.gallery-masonry');
+        msnry.layout();
+      }
+    });
+
+    // Initially hide button if no hidden items
+    if (hiddenItems.length === 0) {
       showMoreBtn.style.display = 'none';
     }
-
-    // Recalculate masonry layout
-    if (typeof Masonry !== 'undefined') {
-      const msnry = new Masonry('.gallery-masonry');
-      msnry.layout();
-    }
-  });
-
-  // Initially hide button if no hidden items
-  if (hiddenItems.length === 0) {
-    showMoreBtn.style.display = 'none';
   }
 });
 
@@ -662,4 +664,3 @@ function setupHomeBookingForm() {
         });
     }
 }
-
